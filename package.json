@@ -1,0 +1,34 @@
+{
+  "name": "mediasoup-custom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js",
+    "mon": "nodemon src/app.js",
+    "watch": "watchify public/index.js -o public/bundle.js -v",
+    "lint": "npx prettier --write .",
+    "docker-build": "docker build --tag dirvann/mediasoup-video-rooms .",
+    "docker-run": "docker run --name dirvann-mediasoup-rooms -p 10000-10100:10000-10100 -p 3016:3016 dirvann/mediasoup-video-rooms",
+    "docker-start": "docker start dirvann-mediasoup-rooms",
+    "docker-stop": "docker stop dirvann-mediasoup-rooms",
+    "compile-mediasoup-client": "npx browserify mediasoup-client-compile.js -o public/modules/mediasoupclient.min.js"
+  },
+  "author": "LXC",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "fs-extra": "^11.3.2",
+    "httpolyglot": "^0.1.2",
+    "jsonwebtoken": "^9.0.2",
+    "mediasoup": "^3.11.5",
+    "mediasoup-client": "^3.7.7",
+    "node-machine-id": "^1.1.12",
+    "socket.io": "^4.7.5"
+  },
+  "devDependencies": {
+    "javascript-obfuscator": "^4.1.1",
+    "prettier": "3.2.5"
+  }
+}
