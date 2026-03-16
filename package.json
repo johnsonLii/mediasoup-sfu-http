@@ -1,5 +1,5 @@
 {
-  "name": "mediasoup-custom",
+  "name": "mediasoup-sfu-http",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -22,7 +22,7 @@
     "fs-extra": "^11.3.2",
     "httpolyglot": "^0.1.2",
     "jsonwebtoken": "^9.0.2",
-    "mediasoup": "^3.11.5",
+    "mediasoup": "^3.19.18",
     "mediasoup-client": "^3.7.7",
     "node-machine-id": "^1.1.12",
     "socket.io": "^4.7.5"
